@@ -1,4 +1,5 @@
 // 1. 전체 상품 페이지, 로그인, 상품 상세 페이지
+//  - 네비게이션 바
 // 2. 전체 상품 페이지에서는 전체 상품을 볼 수 있다
 // 3. 로그인 버튼을 누르면 로그인 페이지가 나온다
 //  - 상품 디테일을 눌렀으나 고르인이 안 되어 있으면 로그인 페이지로 이동한다
@@ -10,6 +11,7 @@
 
 import { Routes, Route } from "react-router-dom";
 import './App.css';
+import Navbar from "./component/Navbar";
 import ProductAll from "./page/ProductAll";
 import ProductDetail from "./page/ProductDetail";
 import Login from "./page/Login";
@@ -17,6 +19,7 @@ import Login from "./page/Login";
 function App() {
   return (
     <div>
+      <Navbar />
       <Routes>
         <Route path="/" element={<ProductAll />} />
         <Route path="/product/:id" element={<ProductDetail />} />

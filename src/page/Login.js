@@ -1,11 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 
-const Login = () => {
+const Login = ({ setAuthenticate }) => {
+
+  const navigate = useNavigate();
 
   const loginUser = event => {
     event.preventDefault();
+    setAuthenticate(true);
     console.log(`hi`);
+    navigate(`/`);
   };
 
   return (

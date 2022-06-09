@@ -23,3 +23,9 @@
 .menu-list li {
 	padding: 10px;
 }
+
+/* product */
+.product-img {
+	display: flex;
+	justify-content: flex-end;
+}

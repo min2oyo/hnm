@@ -4,6 +4,7 @@ npm install react-router-dom@6
 npm i --save @fortawesome/fontawesome-svg-core
 npm install --save @fortawesome/free-solid-svg-icons
 npm install --save @fortawesome/react-fontawesome
+npm install -g json-server / json-server --watch db.json --port 3001
 
 # Getting Started with Create React App
 

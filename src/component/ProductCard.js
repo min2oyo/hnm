@@ -1,12 +1,12 @@
 import React from 'react';
 
-const ProductCard = () => {
+const ProductCard = ({ item }) => {
   return (
     <div>
-      <img src='https://mixxo.com/web/product/tiny/202206/74c76e731c994b13ddb9a8894cb9346f.jpg' alt='product' />
-      <div>상품명</div>
-      <div>가격</div>
-      <div>신상?</div>
+      <img src={item?.img} alt='product' />
+      <div>{item?.title}</div>
+      <div>￦{item?.price}</div>
+      <div>{item?.new ? `신제품` : ``}</div>
     </div>
   );
 };

@@ -10,6 +10,7 @@
 // 7. 상품을 검색할 수 있다
 
 import { Routes, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Navbar from "./component/Navbar";
 import ProductAll from "./page/ProductAll";

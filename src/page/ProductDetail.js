@@ -8,11 +8,11 @@ const ProductDetail = () => {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    getProductsDetail();
+    getProductDetail();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const getProductsDetail = async () => {
+  const getProductDetail = async () => {
     let url = `http://localhost:3001/products/${id}`;
     let response = await fetch(url);
     let data = await response.json();

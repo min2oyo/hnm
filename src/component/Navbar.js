@@ -6,11 +6,17 @@ import { faSearch, faUser } from '@fortawesome/free-solid-svg-icons';
 const Navbar = () => {
 
   const menuList = [`여성`, `Divided`, `남성`, `신생아/유아`, `아동`, `H&M Home`, `Sale`, `지속가능성`];
-
   const navigate = useNavigate();
 
   const goToLogin = () => {
     navigate(`/login`);
+  };
+
+  const search = event => {
+    if (event.key) {
+      let keyword = event.target.value;
+      navigate(`/?q=${keyword}`);
+    }
   };
 
   return (
@@ -30,7 +36,7 @@ const Navbar = () => {
         </ul>
         <div>
           <FontAwesomeIcon icon={faSearch} />
-          <input type='text' />
+          <input type='text' onKeyPress={event => search(event)} />
         </div>
       </div>
     </div>

@@ -13,7 +13,8 @@ const ProductDetail = () => {
   }, []);
 
   const getProductDetail = async () => {
-    let url = `http://localhost:3001/products/${id}`;
+    let url = `https://my-json-server.typicode.com/min2oyo/codingnoona-react-hnm/products/${id}`;
+    // let url = `http://localhost:3001/products/${id}`;
     let response = await fetch(url);
     let data = await response.json();
     setProduct(data);

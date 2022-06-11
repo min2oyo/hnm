@@ -2,11 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { useSearchParams } from 'react-router-dom';
 import ProductCard from '../component/ProductCard';
+import { useDispatch, useSelector } from 'react-redux/es/exports';
+import { productAction } from '../redux/actions/productAction';
 
 const ProductAll = () => {
 
-  const [productList, setProductList] = useState([]);
+  const productList = useSelector(state => state.productList);
   const [query, setQuery] = useSearchParams();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     getProducts();
@@ -15,11 +18,7 @@ const ProductAll = () => {
 
   const getProducts = async () => {
     let searchQuery = query.get(`q`) || ``;
-    let url = `https://my-json-server.typicode.com/min2oyo/codingnoona-react-hnm/products?q=${searchQuery}`;
-    // let url = `http://localhost:3001/products?q=${searchQuery}`;
-    let response = await fetch(url);
-    let data = await response.json();
-    setProductList(data);
+    dispatch(productAction.getProducts(searchQuery));
   };
 
   return (

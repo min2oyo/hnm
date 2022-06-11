@@ -8,6 +8,7 @@ npm install -g json-server / json-server --watch db.json --port 3001
 npm install react-bootstrap bootstrap
 npm install redux react-redux
 npm install redux-thunk
+npm install --save redux-devtools-extension
 
 # Getting Started with Create React App
 

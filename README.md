@@ -6,6 +6,8 @@ npm install --save @fortawesome/free-solid-svg-icons
 npm install --save @fortawesome/react-fontawesome
 npm install -g json-server / json-server --watch db.json --port 3001
 npm install react-bootstrap bootstrap
+npm install redux react-redux
+npm install redux-thunk
 
 # Getting Started with Create React App
 
